@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Marvel — fashion, beauty and everyday style inspiration. Discover curated finds and product guides.">
+<title>Marvel | Fashion & Beauty Finds</title>
+<style>
+:root{--ink:#242126;--muted:#77717a;--rose:#c77b83;--cream:#fbf7f4;--line:#eee5e2;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+.top{background:#29242a;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;font-size:30px;letter-spacing:.08em;font-weight:bold}.logo span{color:var(--rose)}
+nav{display:flex;gap:28px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}nav a:hover,.text-link:hover{color:var(--rose)}
+.hero{background:var(--cream);display:grid;grid-template-columns:1.05fr .95fr;min-height:510px;align-items:center}
+.hero-copy{padding:65px max(4vw,25px) 65px max(4vw,calc((100vw - 1160px)/2))}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:bold}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:normal;line-height:1.12}
+h1{font-size:clamp(42px,5.4vw,70px);margin:18px 0}.hero p{color:var(--muted);max-width:440px;font-size:16px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 23px;margin-top:17px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;border:1px solid var(--ink);transition:.2s}
+.btn:hover{background:var(--rose);border-color:var(--rose)}
+.hero-art{height:100%;min-height:510px;background:linear-gradient(135deg,#ead8d3,#c8a9a2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-art:before{content:"";position:absolute;width:290px;height:390px;border-radius:48% 48% 12% 12%;background:linear-gradient(150deg,#f9efeb,#a87875);transform:rotate(-9deg);box-shadow:25px 25px 0 #b98d88}
+.hero-art:after{content:"MARVEL EDIT";position:absolute;bottom:32px;right:35px;color:#fff;font-family:Georgia,serif;font-size:14px;letter-spacing:.2em}
+.hero-stamp{z-index:1;border:1px solid #fff8;color:white;padding:18px 22px;font-family:Georgia,serif;font-size:24px;letter-spacing:.08em;background:#ffffff20}
+.section{padding:78px 0}.section-head{text-align:center;margin-bottom:35px}.section-head h2{font-size:42px;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile{background:var(--cream);min-height:265px;display:flex;align-items:end;padding:25px;position:relative;overflow:hidden}
+.tile:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#eadbd6,#b98985);opacity:.9}
+.tile:nth-child(2):before{background:linear-gradient(145deg,#e9e4db,#a99a83)}
+.tile:nth-child(3):before{background:linear-gradient(145deg,#e5d9df,#aa8799)}
+.tile-content{position:relative;color:#fff}.tile h3{font-size:30px;margin:0 0 5px}.tile a{font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid #fff;padding-bottom:4px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{border:1px solid var(--line);padding:14px}
+.product-art{height:220px;display:flex;align-items:center;justify-content:center;background:#f4eeeb;color:#a47778;font-family:Georgia,serif;font-size:20px;letter-spacing:.1em;text-align:center;padding:20px}
+.product h3{font-size:22px;margin:17px 0 6px}.product p{font-size:13px;color:var(--muted);min-height:42px;margin:0}
+.product .btn{margin-top:15px;padding:12px 15px;width:100%;text-align:center}
+.note{font-size:12px;color:var(--muted);text-align:center;margin-top:22px}
+.editorial{background:var(--cream)}.editorial-inner{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.editorial-art{min-height:340px;background:linear-gradient(145deg,#dfc8c2,#a77f7b);display:flex;align-items:center;justify-content:center;color:#fff;font:30px Georgia,serif;letter-spacing:.12em}
+.editorial h2{font-size:42px;margin:12px 0}.editorial p{color:var(--muted)}
+.signup{background:#302a30;color:white;text-align:center;padding:65px 20px}.signup h2{font-size:38px;margin:8px 0}.signup p{color:#d7cfd3}
+footer{padding:35px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.disclosure{max-width:760px;margin-top:20px;line-height:1.7}
+@media(max-width:760px){.nav{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column}nav{gap:14px;flex-wrap:wrap;font-size:11px}.hero{grid-template-columns:1fr}.hero-copy{padding:55px 6%}.hero-art{min-height:320px}.grid,.products{grid-template-columns:1fr}.tile{min-height:210px}.editorial-inner{grid-template-columns:1fr;gap:25px}.section{padding:55px 0}.section-head h2{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="top">Curated style • Beauty discoveries • Everyday inspiration</div>
+<header><div class="wrap nav">
+<a class="logo" href="#">MAR<span>V</span>EL</a>
+<nav><a href="#style">Style</a><a href="#beauty">Beauty</a><a href="#edit">The Edit</a><a href="#about">About</a></nav>
+</div></header>
+<main>
+<section class="hero">
+<div class="hero-copy"><div class="eyebrow">The Marvel edit</div>
+<h1>Find your style.<br>Feel your best.</h1>
+<p>Fresh fashion inspiration, beauty favourites and thoughtful finds to make everyday life feel a little more special.</p>
+<a class="btn" href="#style">Explore the edit</a></div>
+<div class="hero-art"><div class="hero-stamp">STYLE • BEAUTY • YOU</div></div>
+</section>
+<section class="section wrap" id="style">
+<div class="section-head"><div class="eyebrow">Discover your look</div><h2>Explore the collections</h2><p>Ideas and inspiration for your next favourite find.</p></div>
+<div class="grid">
+<div class="tile"><div class="tile-content"><h3>Fashion Finds</h3><a href="#products">Explore fashion</a></div></div>
+<div class="tile" id="beauty"><div class="tile-content"><h3>Beauty Edit</h3><a href="#products">Explore beauty</a></div></div>
+<div class="tile"><div class="tile-content"><h3>Everyday Essentials</h3><a href="#products">Shop the edit</a></div></div>
+</div></section>
+<section class="section" id="products" style="background:#fff">
+<div class="wrap"><div class="section-head"><div class="eyebrow">Handpicked inspiration</div><h2>Marvel favourites</h2><p>Replace these sample cards with products you genuinely recommend.</p></div>
+<div class="products">
+<article class="product"><div class="product-art">YOUR FASHION PICK</div><h3>Everyday style essential</h3><p>A versatile wardrobe idea for casual looks and easy styling.</p><a class="btn affiliate-link" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article>
+<article class="product"><div class="product-art">YOUR BEAUTY PICK</div><h3>Beauty routine favourite</h3><p>A product to feature in your skincare, makeup or beauty guide.</p><a class="btn affiliate-link" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article>
+<article class="product"><div class="product-art">YOUR DAILY PICK</div><h3>Little everyday upgrade</h3><p>Share a useful accessory or lifestyle find your audience may love.</p><a class="btn affiliate-link" href="https://www.amazon.co.uk/" target="_blank" rel="nofollow sponsored noopener">View on Amazon UK</a></article>
+</div><p class="note">Sample links only — add your own approved Amazon Associates tracking links before publishing.</p>
+</div></section>
+<section class="section editorial" id="edit"><div class="wrap editorial-inner">
+<div class="editorial-art">THE MARVEL EDIT</div>
+<div><div class="eyebrow">Style notes</div><h2>Good finds. Real inspiration.</h2><p>Use this space for helpful articles such as “5 easy outfit ideas”, “A beginner-friendly skincare routine” or “Beauty bag essentials”. Helpful, original content builds trust with your readers.</p><a class="btn" href="mailto:hello@example.com">Contact Marvel</a></div>
+</div></section>
+<section class="signup" id="about"><div class="eyebrow" style="color:#e6b8bc">A little about us</div><h2>Welcome to Marvel</h2><p>A fashion and beauty inspiration space for discovering your next favourite things.</p></section>
+</main>
+<footer><div class="wrap">
+<div class="foot"><a class="logo" href="#">MAR<span>V</span>EL</a><div><a href="#style">Style</a> &nbsp;·&nbsp; <a href="#beauty">Beauty</a> &nbsp;·&nbsp; <a href="#about">About</a></div><div>© <span id="year"></span> Marvel</div></div>
+<p class="disclosure"><strong>Affiliate disclosure:</strong> Marvel may earn a commission from qualifying purchases made through affiliate links, at no extra cost to you. As an Amazon Associate I earn from qualifying purchases. This site is not owned by or affiliated with Pinterest or Amazon.</p>
+<p>Before publishing: replace sample product links with your own Amazon Associates Special Links, add your real contact details and Pinterest profile URL, and publish a privacy policy and affiliate disclosure that meet the rules applicable to your site.</p>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
